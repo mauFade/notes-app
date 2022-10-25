@@ -1,12 +1,11 @@
-FROM node:latest
+FROM node:alpine
 WORKDIR ./app
-COPY ./package.json ./
+COPY package.json ./
+COPY yarn.lock ./ 
 COPY prisma ./prisma/
-RUN yarn
-RUN yarn prisma generate
-RUN yarn prisma migrate dev
+COPY tsconfig.json ./
 COPY ./ ./
-RUN yarn test
+RUN yarn
 RUN yarn build
 EXPOSE 3003
 CMD ["npm", "start"]

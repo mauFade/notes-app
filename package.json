@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node-dev --transpyle-only ./src/infra/server.ts",
     "build": "tsc",
-    "start": "node ./src/infra/server.js"
+    "start": "node src/infra/server.js"
   },
   "keywords": [],
   "author": "",
@@ -28,11 +28,14 @@
     "typescript": "*"
   },
   "dependencies": {
+    "@prisma/client": "^4.5.0",
     "celebrate": "^15.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "jsonwebtoken": "^8.5.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.7.0"
   }
 }
