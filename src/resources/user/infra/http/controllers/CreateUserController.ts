@@ -15,6 +15,8 @@ export class CreateUserController {
   ): Promise<Response> {
     const { name, email, password }: IRequest = request.body;
 
+    console.log(name, email, password);
+
     const user = await container
       .resolve(CreateUserService)
       .execute({ email, name, password });

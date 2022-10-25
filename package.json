@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --transpyle-only ./src/infra/server.ts",
+    "dev": "ts-node-dev src/infra/server.ts",
     "build": "tsc",
-    "start": "node src/infra/server.js"
+    "start": "node dist/src/infra/server.js"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +33,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "joi": "^17.6.4",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
     "reflect-metadata": "^0.1.13",
