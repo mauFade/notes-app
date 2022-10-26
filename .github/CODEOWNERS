@@ -1,0 +1,6 @@
+*.js @mauFade
+*.ts @mauFade
+.github/* @mauFade
+.docker/* @mauFade
+*.sh @mauFade
+Dockerfile.* @mauFade
