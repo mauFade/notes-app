@@ -11,11 +11,17 @@ interface IRequest {
 export class CreateUserService {
   constructor(
     @inject("UsersRepository")
-    private userRepository: IUserRepository
-  ) {}
+    private usersRepository: IUserRepository
+  ) {
+    //
+  }
 
   public async execute({ email, name, password }: IRequest): Promise<Users> {
-    const user = await this.userRepository.create({ email, name, password });
+    const user = await this.usersRepository.create({
+      email,
+      name,
+      password,
+    });
 
     return user;
   }

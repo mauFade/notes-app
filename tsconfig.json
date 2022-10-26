@@ -12,7 +12,14 @@
     "skipLibCheck": true,
     "strictPropertyInitialization": false,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "@resources/*": ["./src/resources/*"],
+      "@infra/*": ["./src/infra/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@configs/*": ["./src/configs/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "./src/@types"]
   },
   "exclude": ["node_modules"]
 }

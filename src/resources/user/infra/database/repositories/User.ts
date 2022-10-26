@@ -2,7 +2,7 @@ import { prisma } from "../../../../../configs/prisma";
 import { IUser } from "../../../dtos/IUser";
 import { IUserRepository, Users } from "../entities/User";
 
-export class UserRepository implements IUserRepository {
+class UserRepository implements IUserRepository {
   public async create({ email, name, password }: IUser): Promise<Users> {
     const user = (await prisma.user.create({
       data: {
@@ -35,3 +35,5 @@ export class UserRepository implements IUserRepository {
     return user;
   }
 }
+
+export default UserRepository;
