@@ -9,12 +9,12 @@
     "rootDir": "./",
     "strict": true,
     "strictPropertyInitialization": false,
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "@resources/*": ["./src/resources/*"],
-      "@infra/*": ["./src/infra/*"],
-      "@lib/*": ["./src/lib/*"],
-      "@configs/*": ["./src/configs/*"]
+      "@resources/*": ["resources/*"],
+      "@infra/*": ["infra/*"],
+      "@lib/*": ["lib/*"],
+      "@configs/*": ["configs/*"]
     },
     "typeRoots": ["./node_modules/@types", "./src/@types"],
     "esModuleInterop": true,

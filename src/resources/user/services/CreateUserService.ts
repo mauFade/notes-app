@@ -12,9 +12,7 @@ export class CreateUserService {
   constructor(
     @inject("UsersRepository")
     private usersRepository: IUserRepository
-  ) {
-    //
-  }
+  ) {}
 
   public async execute({ email, name, password }: IRequest): Promise<Users> {
     const user = await this.usersRepository.create({
