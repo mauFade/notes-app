@@ -1,5 +1,8 @@
-import "dotenv/config";
 import "reflect-metadata";
+import "dotenv/config";
+
+import "../lib/adapters/index";
+
 import express, { Application } from "express";
 import cors from "cors";
 import morgan from "morgan";

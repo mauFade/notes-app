@@ -1,25 +1,27 @@
 {
   "compilerOptions": {
-    "target": "es2021",
-    "module": "commonjs",
-    "rootDir": "./",
-    "resolveJsonModule": true,
-    "outDir": "./dist",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
     "useUnknownInCatchVariables": false,
-    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict": true,
     "strictPropertyInitialization": false,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    "baseUrl": ".",
     "paths": {
       "@resources/*": ["./src/resources/*"],
       "@infra/*": ["./src/infra/*"],
       "@lib/*": ["./src/lib/*"],
       "@configs/*": ["./src/configs/*"]
     },
-    "typeRoots": ["./node_modules/@types", "./src/@types"]
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "exclude": ["node_modules"]
+  "exclude": ["jest.config.ts", "jest-setup-file.ts", "ormconfig.ts"]
 }
